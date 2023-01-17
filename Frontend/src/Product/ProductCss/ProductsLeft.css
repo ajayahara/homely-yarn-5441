@@ -1,0 +1,53 @@
+.a-products-left {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    background-color: #f5f5f5;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 15px;
+}
+
+.a-sortlist {
+    background-color: #ffffff;
+    border-top: 0.1px solid gray;
+    border-left: 0.1px solid gray;
+    border-right: 0.1px solid gray;
+}
+
+.a-sortlist-item-bottom {
+    font-size: 13px;
+    padding: 0px 10px 10px 10px;
+}
+.a-sortlist-item-bottom>div{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.a-sortlist-item-top {
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 18px 0px;
+}
+.a-sortlist-item-top:hover{
+    background-color: #c9048f;
+    color: #ffffff;
+}
+.a-sortlist-hide{
+    display: none;
+}
+.a-sortlist-color{
+    background-color: #c9048f;
+    color: #ffffff;
+}
+
+/* The Below CSS is for Designing Scrollbar */
+.a-products-left::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+}
+
+.a-products-left::-webkit-scrollbar-thumb {
+    background:gray;
+}
