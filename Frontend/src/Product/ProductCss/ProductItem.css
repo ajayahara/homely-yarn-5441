@@ -1,0 +1,81 @@
+.a-productitem{
+    font-size: 13px;
+    width: 210px;
+    height: 340px;
+    border: 0.05px solid gainsboro;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
+    cursor: pointer;
+}
+.a-productitem:hover .a-productitem-div{
+    bottom: 0px;
+}
+.a-productitem:hover .watch{
+    display: block;
+}
+.a-productitem-image>img{
+    width: 100%;
+}
+.a-productitem-div{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+    background: #fff;
+    bottom: -7%;
+    transition: 0.8s;
+}
+.a-productitem-div>div:nth-child(1)>p{
+    color: black;
+}
+.a-productitem-div>div:nth-child(2){
+    display: flex;
+    gap: 8%;
+}
+.a-productitem-div>div:nth-child(2)>span:nth-child(1){
+    color:  #db2ed3;
+}
+.a-productitem-div>div:nth-child(2)>span:nth-child(2){
+    color: gray;
+    text-decoration: line-through;
+
+}
+.a-productitem-div>div:nth-child(2)>span:nth-child(3){
+    color:  #7c2502;
+
+}
+.a-productitem-div>div:nth-child(3){
+    display: flex;
+    gap: 5%;
+}
+.a-productitem-div>div:nth-child(3)>button{
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 0.05px solid gainsboro;
+    color: gray;
+}
+.a-productitem-div>div:nth-child(3)>button:hover{
+    text-decoration: underline;
+   background-color:  #db2ed3;
+   color: white;
+}
+.heart{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.watch{
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    display: none;
+}
+.watch>img{
+    width: 28px; 
+}

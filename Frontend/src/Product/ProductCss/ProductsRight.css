@@ -1,0 +1,10 @@
+.a-products-right{
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(4,210px);
+    padding:0px 10px 0px 20px;
+    gap: 30px;
+}
+.a-products-right::-webkit-scrollbar {
+    display: none;
+}
