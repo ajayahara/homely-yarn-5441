@@ -1,10 +1,10 @@
 .a-productitem{
     font-size: 13px;
-    width: 210px;
+    width: 225px;
     height: 340px;
     border: 0.05px solid gainsboro;
     overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
     position: relative;
     cursor: pointer;
 }
@@ -78,4 +78,12 @@
 }
 .watch>img{
     width: 28px; 
+}
+.hot-deal{
+    position: absolute;
+    top: -15px;
+    left: 0px;
+}
+.hot-deal>img{
+    width: 70px;
 }

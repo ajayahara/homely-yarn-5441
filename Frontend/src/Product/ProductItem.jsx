@@ -28,6 +28,9 @@ export const ProductItem = () => {
         <div className='watch'>
             <img src="/Images/seen.png" alt="" />
         </div>
+        <div className='hot-deal'>
+            <img src="/Images/hot-deal.png" alt="" />
+        </div>
     </div>
   )
 }
