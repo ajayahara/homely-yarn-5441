@@ -28,6 +28,13 @@
     font-size: 16px;
     text-transform: uppercase;
     padding: 18px 0px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    padding-left: 5%;
+}
+.a-sortlist-item-top>img{
+    width: 25px;
 }
 .a-sortlist-item-top:hover{
     background-color: #c9048f;

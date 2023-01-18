@@ -1,10 +1,63 @@
 .a-products-right{
+    padding:0px 20px 0px 20px;
+}
+.a-products-right-top{
+    margin-bottom: 15px;
+}
+.a-products-right-top>div:nth-child(1){
+    display: flex;
+    align-items: center;
+}
+.a-products-right-top>div:nth-child(1)>span:nth-child(1){
+    font-size: 25px;
+    color: black;
+}
+.a-products-right-top>div:nth-child(1)>span:nth-child(2){
+    color: gainsboro;
+}
+.a-products-right-top>div:nth-child(2){
+    color: #c9048f;
+    font-size: 14px;
+}
+.a-products-right-top>div:nth-child(3){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.a-products-right-top>div:nth-child(3)>div:nth-child(1){
+    display: flex;
+    gap: 5px;
+}
+.a-products-right-top>div:nth-child(3)>div:nth-child(1)>button{
+    background-color: white;
+    border: 0.05px solid gainsboro;
+    padding: 2px;
+}
+.a-products-right-top>div:nth-child(3)>div:nth-child(2){
+    display: flex;
+    gap: 10px;
+}
+.a-products-right-top>div:nth-child(3)>div:nth-child(2)>select{
+    border: 3px solid gainsboro;
+    padding:0px  10px;
+}
+.a-products-right-top>div:nth-child(3)>div:nth-child(2)>select:focus {
+   outline: none;
+}
+.a-line{
+    margin-top: 10px;
+    border: 2px dotted gainsboro; 
+}
+
+
+.a-products-right-bottom{
+    height: 60vh;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(4,210px);
-    padding:0px 10px 0px 20px;
-    gap: 30px;
+    grid-template-columns: repeat(4,225px);
+    gap: 20px;
 }
-.a-products-right::-webkit-scrollbar {
+.a-products-right-bottom::-webkit-scrollbar {
     display: none;
 }
