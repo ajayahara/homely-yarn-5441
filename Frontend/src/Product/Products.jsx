@@ -4,7 +4,7 @@ import { ProductsLeft } from './ProductsLeft'
 import ProductsRight from './ProductsRight'
 const Products = () => {
   return (
-    <div className='a-products'>
+     <div className='a-products'>
           <ProductsLeft/>
           <ProductsRight/>
     </div>

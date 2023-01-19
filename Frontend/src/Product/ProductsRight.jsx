@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect,useState  } from 'react'
 import "./ProductCss/ProductsRight.css"
 import { ProductItem } from './ProductItem'
+import { Spinner1 } from './Spinner1'
 
 const ProductsRight = () => {
   const [products,setProducts]=useState(null);
@@ -19,7 +20,12 @@ const ProductsRight = () => {
   useEffect(()=>{
     getData("http://localhost:8080")
   },[])
+
+
+
+
   return (
+    <>
     <div className='a-products-right'>
       <div className='a-products-right-top'>
           <div>
@@ -30,10 +36,10 @@ const ProductsRight = () => {
           </div>
           <div>
             <div>
-                <button>S(170)</button>
-                <button>M(170)</button>
-                <button>L(170)</button>
-                <button>XL(170)</button>
+                <button>S({products?.length})</button>
+                <button>M({products?.length})</button>
+                <button>L({products?.length})</button>
+                <button>XL({products?.length})</button>
             </div>
             <div>
               <span>Sort:</span>
@@ -51,12 +57,12 @@ const ProductsRight = () => {
           </div>
       </div>
       <div className='a-products-right-bottom'>
-        {(products==null)?"Fetching the Products":products.map((el)=>{
+        {(products==null)? <Spinner1/>:products.map((el)=>{
             return <ProductItem key={el._id} {...el}/>
         })}
     </div>
     </div>
-    
+    </>
   )
 }
 
