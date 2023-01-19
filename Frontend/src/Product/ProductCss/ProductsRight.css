@@ -1,5 +1,8 @@
 .a-products-right{
     padding:0px 20px 0px 20px;
+    height: 80vh;
+    width: 100%;
+    position: relative;
 }
 .a-products-right-top{
     margin-bottom: 15px;

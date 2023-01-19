@@ -1,0 +1,13 @@
+.spinner-div{
+    width: 100%;
+    height: 60vh;
+    background-color: gainsboro;
+    display: grid;
+    position:absolute;
+    z-index: 200;
+    place-items: center;
+    opacity: 0.4;
+}
+.spinner{
+    opacity: 1;
+}
