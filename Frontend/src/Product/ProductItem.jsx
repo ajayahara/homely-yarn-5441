@@ -1,19 +1,21 @@
 import React from 'react'
 import "./ProductCss/ProductItem.css"
-export const ProductItem = () => {
+import {useNavigate} from "react-router-dom"
+export const ProductItem = ({  _id,name,image_url,offerPrice,actualPrice,discount}) => {
+  const navigate=useNavigate()
   return (
     <div className='a-productitem'>
         <div className='a-productitem-image'>
-            <img src="https://imagescdn.abof.com/img/app/product/6/688972-7326676.JPG?auto=format&w=207.9375" alt="Image1" />
+            <img src={image_url} alt="Image1" />
         </div>
         <div className='a-productitem-div'>
             <div>
-                <p>abof Men Slim Fit T Shirt</p>
+                <p>{name}</p>
             </div>
             <div>
-                <span>₹383</span>
-                <span>₹1380</span>
-                <span>(70%)</span>
+                <span>₹{offerPrice}</span>
+                <span>₹{actualPrice}</span>
+                <span>({70}%)</span>
             </div>
             <div>
                 <button>S</button>
@@ -26,7 +28,9 @@ export const ProductItem = () => {
             <img src="/Images/heart_bordered.png" alt="" />
         </div>
         <div className='watch'>
-            <img src="/Images/seen.png" alt="" />
+            <img src="/Images/seen.png" alt="" onClick={()=>{
+                navigate(`/products/:${_id}`)
+            }}/>
         </div>
         <div className='hot-deal'>
             <img src="/Images/hot-deal.png" alt="" />

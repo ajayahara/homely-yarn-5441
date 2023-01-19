@@ -81,9 +81,9 @@
 }
 .hot-deal{
     position: absolute;
-    top: -15px;
+    top: -10px;
     left: 0px;
 }
 .hot-deal>img{
-    width: 70px;
+    width: 60px;
 }
