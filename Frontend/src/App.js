@@ -1,12 +1,11 @@
+import { AllRoute } from './Allroutes/AllRoute';
 import './App.css';
-import Home from './Home/Home';
-// import Products from './Product/Products';
-
 function App() {
   return (
     <div className="App">
-    <Home/>
-     {/* <Products/> */}
+      {/* <Navbar/> */}
+      <AllRoute/>
+      {/* <Footer/> */}
     </div>
   );
 }

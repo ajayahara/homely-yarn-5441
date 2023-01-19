@@ -1,14 +1,29 @@
 import React from 'react'
+import { useEffect,useState  } from 'react'
 import "./ProductCss/ProductsRight.css"
 import { ProductItem } from './ProductItem'
 
 const ProductsRight = () => {
-  const arr=new Array(50).fill(0)
+  const [products,setProducts]=useState(null);
+  const getData= async (url)=>{
+      try {
+      const res=await fetch(url);
+      const data=await res.json();
+      setProducts(data.filter(el=>{
+        return el.category==="Male-tshirt"
+      }))
+      } catch (error) {
+        console.log(error);
+      }
+  }
+  useEffect(()=>{
+    getData("http://localhost:8080")
+  },[])
   return (
     <div className='a-products-right'>
       <div className='a-products-right-top'>
           <div>
-            <span>T-Shirts for Men</span><span>225  Products</span>
+            <span>T-Shirts for Men</span><span>{products?.length}  Products</span>
           </div>
           <div>
           Choose Your Size:
@@ -36,8 +51,8 @@ const ProductsRight = () => {
           </div>
       </div>
       <div className='a-products-right-bottom'>
-        {arr.map((el)=>{
-            return <ProductItem/>
+        {(products==null)?"Fetching the Products":products.map((el)=>{
+            return <ProductItem key={el._id} {...el}/>
         })}
     </div>
     </div>
