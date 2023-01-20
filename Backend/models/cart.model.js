@@ -1,13 +1,14 @@
 const mongoose=require("mongoose")
 
 const cartSchema=mongoose.Schema({
-    name:String,
-    actualPrice:String,
-    offerPrice:String,
-    Image:String,
-    discount:String,
-    color:String,
-    gender:String,
+    name:{type:String,required:true},
+    actualPrice:{type:Number,required:true},
+    offerPrice:{type:Number,required:true},
+    Image:{type:String,required:true},
+    discount:{type:Number,required:true},
+    category:{type:String,required:true},
+    color:{type:String,required:true},
+    gender:{type:String,required:true},
     userID:String
 },{
     versionKey:false
