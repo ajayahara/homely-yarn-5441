@@ -53,10 +53,33 @@ export const ACTION_DELETE_PRODUCT =
         },
       });
       dispatch({ type: DELETE_PRODUCT_SUCCESS });
-      console.log("i am here");
+      console.log("Dont worry i am here for you");
       return dispatch(ACTION_GET_PRODUCTS());
     } catch (err) {
       dispatch({ type: DELETE_PRODUCT_ERROR, payload: err.message });
+    }
+  };
+
+export const ACTION_ADD_PRODUCT =
+  (payload = {}) =>
+  async (dispatch) => {
+    dispatch({ type: ADD_PRODUCT_LOADING });
+    console.log(payload.area);
+    try {
+      await axios.post(`https://sample-backend-cvar.onrender.com/${payload.value}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: {
+          area: payload.area,
+        },
+      });
+
+      //  await axios.post(`http://localhost:8080/${payload.value}`, payload.area);
+
+      return dispatch({ type: ADD_PRODUCT_SUCCESS });
+    } catch (err) {
+      dispatch({ type: ADD_PRODUCT_ERROR, payload: err.message });
     }
   };
 
