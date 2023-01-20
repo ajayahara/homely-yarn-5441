@@ -1,15 +1,18 @@
 .footer1
 {
+    margin-top: 10px;
     width: 100%;
-    height: 400px;
-    border: 1px solid red;
+    height: 330px;
+    border: 1px solid none;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
+    background-color: black;
+    color: white;
 }
 .footer-a
 {
-    border: 1px solid red;
+    border: 1px solid none;
 }
 .footer-a h1
 {
@@ -25,7 +28,7 @@
 }
 .footer-b
 {
-    border: 1px solid red;
+    border: 1px solid none;
 }
 .footer-b h1
 {
@@ -37,11 +40,11 @@
 {
     margin-top: 10px;
    list-style-type: none;
-    margin-left: 120px;
+    margin-left: 150px;
 }
 .footer-c
 {
-    border: 1px solid red;
+    border: 1px solid none;
 }
 .footer-c h1
 {
@@ -53,11 +56,28 @@
 {
     margin-top: 10px;
    list-style-type: none;
-    margin-left: 120px;
+    margin-left: 130px;
 }
 .footer-d
 {
-    border: 1px solid red;
+    border: 1px solid none;
+   gap:10px;
+    display: flex;
+    
+}
+.footer-d h1{
+    margin-top: 30px;
+    text-align:center;
+    font-size: 20px;
+    
+}
+.footer-d div{
+    margin-top: 90px;
+ width: 50px;
+ height: 50px;
+ border: 1px solid none;
+ border-radius: 100%;
+background-color: white;
 }
 .footer2
 {
@@ -69,6 +89,6 @@
 }
 .footer2 h1{
     margin-top: 20px;
-    
+    margin-left: 100px;
     text-align: center;
 }
