@@ -44,6 +44,7 @@
 .a-products-right-top>div:nth-child(3)>div:nth-child(2)>select{
     border: 3px solid gainsboro;
     padding:0px  10px;
+    appearance:none;
 }
 .a-products-right-top>div:nth-child(3)>div:nth-child(2)>select:focus {
    outline: none;
