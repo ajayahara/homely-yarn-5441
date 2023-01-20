@@ -65,11 +65,11 @@ const ProductsRight = () => {
   },[location.search,query])
 
   useEffect(()=>{
-    getData("http://localhost:8080")
+    getData("https://cyan-splendid-kingfisher.cyclic.app/products/get")
   },[color,price])
 
 
-
+console.log(products)
 
   return (
     <>
