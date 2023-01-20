@@ -1,12 +1,14 @@
 import { AllRoute } from './Allroutes/AllRoute';
 import './App.css';
+import Home from './Home/Home';
 // import Footer from './Home/Footer';
-import Navbar from './Home/Navbar';
+//import Navbar from './Home/Navbar';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <AllRoute/>
+      {/* <Navbar/>
+      <AllRoute/> */}
+      <Home />
       {/* <Footer/> */}
     </div>
   );
