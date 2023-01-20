@@ -151,3 +151,25 @@ background-size: cover;
     width: 220px;
     height: 300px;
 }
+.topseller 
+{
+    width: 80%;
+    height: 390px;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+.topseller  div{
+    margin-top: 10px;
+    width: 270px;
+    height: 350px;
+    border: 1px solid red;
+}
+.top  h1{
+    margin-left: 100px;
+    margin-top: 60px;
+    font-size: 21px;
+}

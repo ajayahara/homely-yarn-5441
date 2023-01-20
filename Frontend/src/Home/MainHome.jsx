@@ -116,6 +116,16 @@ const MainHome = () => {
                 </div>
               </div>
        </div>
+       <div className='top'>
+       <h1>Top Seller</h1>
+       </div>
+       <div className='topseller'>
+        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+       </div>
     </>
   )
 }
