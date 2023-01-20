@@ -121,10 +121,30 @@ const MainHome = () => {
        </div>
        <div className='topseller'>
         
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+            <img src=''
+                alt='men'
+            />
+            <p></p>
+        </div>
+        <div>
+        <img src=''
+                alt='men'
+            />
+            <p></p>
+        </div>
+        <div>
+        <img src=''
+                alt='men'
+            />
+            <p></p>
+        </div>
+        <div>
+        <img src=''
+                alt='men'
+            />
+            <p></p>
+        </div>
        </div>
     </>
   )
