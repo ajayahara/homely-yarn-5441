@@ -151,3 +151,35 @@ background-size: cover;
     width: 220px;
     height: 300px;
 }
+.topseller 
+{
+    width: 80%;
+    height: 390px;
+    border: 1px solid none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    margin-left: 110px;
+    margin-top: 10px;
+}
+.topseller  div{
+    margin-top: 10px;
+    width: 270px;
+    height: 350px;
+    border: 1px solid none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+border-radius: 7px;
+}
+.topseller img{
+    width: 270px;
+    height: 300px;
+}
+.topseller p
+{
+    text-align: center;
+}
+.top  h1{
+    margin-left: 100px;
+    margin-top: 60px;
+    font-size: 21px;
+}
