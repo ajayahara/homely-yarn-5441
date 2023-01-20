@@ -1,8 +1,22 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom';
 import "./ProductCss/ProductsLeft.css"
 export const ProductsLeft = () => {
+    const [query,setQuery]=useSearchParams("")
     const [active, setActive] = useState("");
+    const [color,setColor]=useState(query.get("color")||"");
+    const [price,setPrice]=useState(query.get("price")||"");
+    
+    useEffect(()=>{
+        const queries={};
+        if(price!=="")
+            queries.price=price;
+        if(color!=="")
+            queries.color=color
+        setQuery(queries)
+    },[price,color,setQuery])
     return (
         <div className='a-products-left'>
             {/*All Discount */}
@@ -102,11 +116,11 @@ export const ProductsLeft = () => {
                 </div>
                 <div className={`a-sortlist-item-bottom ${(active !== "Price") ? "a-sortlist-hide" : ""}`}>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(price==="399 And Below")?setPrice(""):setPrice("399 And Below")} checked={price==="399 And Below"}/>
                         <span>399 And Below</span>
                     </div>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(price==="400 To 599")?setPrice(""):setPrice("400 To 599")} checked={price==="400 To 599"}/>
                         <span>400 To 599</span>
                     </div>
                 </div>
@@ -119,27 +133,27 @@ export const ProductsLeft = () => {
                 </div>
                 <div className={`a-sortlist-item-bottom ${(active !== "Color") ? "a-sortlist-hide" : ""}`}>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox"  onChange={()=>(color==="white")?setColor(""):setColor("white")} checked={color==="white"} />
                         <span>White</span>
                     </div>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(color==="black")?setColor(""):setColor("black")} checked={color==="black"} />
                         <span>Black</span>
                     </div>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(color==="red")?setColor(""):setColor("red")} checked={color==="red"} />
                         <span>Red</span>
                     </div>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(color==="yellow")?setColor(""):setColor("yellow")} checked={color==="yellow"} />
                         <span>Yellow</span>
                     </div>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(color==="pink")?setColor(""):setColor("pink")} checked={color==="pink"}/>
                         <span>Pink</span>
                     </div>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={()=>(color==="multi")?setColor(""):setColor("multi")} checked={color==="multi"}/>
                         <span>Multi</span>
                     </div>
                 </div>

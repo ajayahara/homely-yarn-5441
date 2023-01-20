@@ -2,9 +2,13 @@ import React from 'react'
 import "./ProductCss/ProductItem.css"
 import {useNavigate} from "react-router-dom"
 import { useState } from 'react';
+import { useToast } from '@chakra-ui/react'
+
+
 export const ProductItem = ({  _id,name,image_url,offerPrice,actualPrice,discount}) => {
   const navigate=useNavigate();
   const [wishlisted,setWishlisted]=useState(false)
+  const toastWishlist=useToast()
   return (
     <div className='a-productitem'>
         <div className='a-productitem-image'>
@@ -29,6 +33,21 @@ export const ProductItem = ({  _id,name,image_url,offerPrice,actualPrice,discoun
         <div className='heart' >
             <img src={wishlisted?"/Images/heart_2.png":"/Images/heart_1.png"} alt="" onClick={()=>{
                 setWishlisted(!wishlisted)
+                wishlisted===false? toastWishlist({
+                    title: 'Wishlist',
+                    description: "Successfully Added To Wishlist",
+                    status:'info',
+                    duration: 1000,
+                    isClosable: true,
+                    position:'top',
+                  }):toastWishlist({
+                    title: 'Wishlist',
+                    description: "Successfully Removed From Wishlist",
+                    status:'info',
+                    duration: 1000,
+                    isClosable: true,
+                    position:'top',
+                  })
         }}/>
         </div>
         <div className='watch'>
