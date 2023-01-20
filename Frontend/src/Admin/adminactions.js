@@ -40,9 +40,9 @@ export const ACTION_DELETE_PRODUCT =
   (payload = {}) =>
   async (dispatch) => {
     dispatch({ type: DELETE_PRODUCT_LOADING });
-
+//url dalna hai idhar
     try {
-      await axios.delete(`https://sample-backend-cvar.onrender.com/${payload.value}`, {
+      await axios.delete(`/${payload.value}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -66,7 +66,8 @@ export const ACTION_ADD_PRODUCT =
     dispatch({ type: ADD_PRODUCT_LOADING });
     console.log(payload.area);
     try {
-      await axios.post(`https://sample-backend-cvar.onrender.com/${payload.value}`, {
+        //url dalna hai idhar
+      await axios.post(`/${payload.value}`, {
         headers: {
           "Content-Type": "application/json",
         },
