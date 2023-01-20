@@ -4,3 +4,6 @@
   margin: 0px;
   font-family: 'Poppins'
 }
+input:hover{
+  cursor: pointer;
+}
