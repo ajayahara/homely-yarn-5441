@@ -1,3 +1,4 @@
+import { useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import "./Register.css"
 export const Register = () => {
@@ -6,31 +7,84 @@ export const Register = () => {
         password: "Ajaya@111",
         mobile: 6370014498,
         name: "Ajaya Kumar Behera",
-        type:""
+        type: ""
     }
+    const toast = useToast()
     const [user, setUser] = useState(iniUser)
-    console.log(user)
+    const [key, setKey] = useState(null)
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (user.type === "") {
+            toast({
+                title: 'Registration',
+                description: "Please Select A Type",
+                status: 'warning',
+                duration: 3000,
+                isClosable: true,
+                position: 'top',
+            })
+            return;
+        }
+        if (user.type === "Admin" && key !== "NEM_111_PROJECT") {
+            toast({
+                title: 'Registration',
+                description: "Incorrect Key",
+                status: 'error',
+                duration: 3000,
+                isClosable: true,
+                position: 'top',
+            })
+            return;
+        }
+        const payload = {
+            email: user.email,
+            pwd: user.password,
+            name: user.name,
+            type: user.type,
+            mobile: user.mobile
+        }
+        fetch("", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then((res) => res.json()).then((data) => {
+            console.log(data);
+        }).catch((err) => {
+            console.log(err)
+        })
+        setUser(iniUser)
+    }
     return (
         <div className='login'>
             <div className='login-header'>
                 SIGN UP
             </div>
-            <form className='register-form'>
+            <form className='register-form' onSubmit={handleSubmit}>
                 <div>
-                    <input type="text" placeholder='Name' required defaultValue={user.name} />
+                    <input type="text" placeholder='Name' required value={user.name} onChange={(e) => {
+                        setUser({ ...user, name: e.target.value })
+                    }} />
                 </div>
                 <div>
-                    <input type="text" placeholder='Email Address' required defaultValue={user.email} />
+                    <input type="text" placeholder='Email Address' required value={user.email} onChange={(e) => {
+                        setUser({ ...user, email: e.target.value })
+                    }} />
                 </div>
                 <div>
-                    <input type="number" placeholder='Mobile' required defaultValue={user.mobile} />
+                    <input type="number" placeholder='Mobile' required value={user.mobile} onChange={(e) => {
+                        setUser({ ...user, mobile: e.target.value })
+                    }} />
                 </div>
                 <div>
-                    <input type="password" placeholder='Password' required defaultValue={user.password} />
+                    <input type="password" placeholder='Password' required value={user.password} onChange={(e) => {
+                        setUser({ ...user, password: e.target.value })
+                    }} />
                 </div>
                 <div>
-                    <select name="" id="" value={user.type} onChange={(e)=>{
-                        setUser({...user,type:e.target.value})
+                    <select name="" id="" value={user.type} onChange={(e) => {
+                        setUser({ ...user, type: e.target.value })
                     }}>
                         <option value="">Select Type</option>
                         <option value="User">User</option>
@@ -38,7 +92,9 @@ export const Register = () => {
                     </select>
                 </div>
                 <div>
-                     <input type="text" placeholder='Provide Secret Key For Admin' required disabled={user.type!=="Admin"} />
+                    <input type="password" placeholder='Provide Secret Key For Admin' required disabled={user.type !== "Admin"} onChange={(e)=>{
+                        setKey(e.target.value)
+                    }} />
                 </div>
                 <div className='div-agree'>
                     <input type="checkbox" defaultChecked />
