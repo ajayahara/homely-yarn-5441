@@ -1,5 +1,11 @@
+.nav{
+ height: 150px;
+}
+
+
 .div1photoofnavbar
 {
+
     width: 100%;
     height: 508px;
     border: 3px solid none;
@@ -21,7 +27,7 @@
 {
     text-align: center;
     margin-top: 20px;
-}
+    font-size: 30px;}
 .Topcategories-grid
 {
     margin-left: 100px;
@@ -116,7 +122,10 @@ background-size: cover;
    
     border: 1px solid none;
 }
-
+.viewall h1{
+    font-size: 35px;
+    font-weight: bolder;
+}
 .viewall button
 {
     margin-top: 30px;
@@ -181,5 +190,5 @@ border-radius: 7px;
 .top  h1{
     margin-left: 100px;
     margin-top: 60px;
-    font-size: 21px;
+    font-size: 30px;
 }

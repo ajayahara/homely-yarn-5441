@@ -1,12 +1,13 @@
 import React from 'react'
 import {Route,Routes} from "react-router-dom"
-import MainHome from '../Home/MainHome'
+import Home from '../Home/Home'
+// import MainHome from '../Home/MainHome'
 import Products from '../Product/Products'
 import { SingleProduct } from '../SingleProduct/SingleProduct'
 export const AllRoute = () => {
   return (
     <Routes>
-        <Route path='/' element={<MainHome/>}></Route>
+        <Route path='/' element={<Home/>}></Route>
         <Route path='/register' element={<div>Register</div>}></Route>
         <Route path='/login' element={<div>Login</div>}></Route>
         <Route path='/products' element={<Products/>}></Route>

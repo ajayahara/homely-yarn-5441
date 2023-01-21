@@ -1,25 +1,39 @@
 import React from 'react'
 //import { Link } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import "./MainHome.css"
 const MainHome = () => {
+    const Nav=useNavigate();
+    const handelclick=()=>
+    {
+        Nav("/products");
+    }
   return (
     <>
+        <div className='nav'>
 
+        </div>
       <div className="div1photoofnavbar">
+      <NavLink to="/products">
       <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10334.jpg?w=1898.75&auto=format'
             alt='photo1'
         />
+        </NavLink>
       </div>
       <div className='Topcategories'>
            <h1>Top categories</h1>
       </div>
       <div className='Topcategories-grid'>
         <div>
-            <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10026.jpg?w=303.8&auto=format'
+        <NavLink to="/products">
+        <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10026.jpg?w=303.8&auto=format'
                 alt='1'
             />
+        </NavLink>
+            
         </div>
         <div>
+
         <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10027.jpg?w=303.8&auto=format'
                 alt='2'
             />
@@ -69,14 +83,20 @@ const MainHome = () => {
        <div className='photo3'>
        
         <div className='ph1'>
-            <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10521.jpg?w=501.27000000000004&auto=format'
+        <NavLink to="/products">
+        <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10521.jpg?w=501.27000000000004&auto=format'
                 alt='ph1'
             />
+        </NavLink>
+           
         </div>
         <div className='ph2'>
+        <NavLink to="/products">
         <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10522.jpg?w=1002.5400000000001&auto=format'
                 alt=''
             />
+        </NavLink>
+       
         </div>
        
        </div>
@@ -85,7 +105,7 @@ const MainHome = () => {
               <div className='ph11'>
                 <div className='viewall'>
                     <h1>BEST BUY <br></br> STORE</h1>
-                    <button>VEIW ALL</button>
+                    <button onClick={handelclick}>VEIW ALL</button>
                 </div>
               </div>
               <div className='ph12'>
@@ -142,13 +162,17 @@ const MainHome = () => {
             <p>Girl child Category</p>
             <p>Rs.100-100000</p>
         </div>
+        <NavLink to="/products">
         <div>
+        
         <img src='https://rukminim1.flixcart.com/image/612/612/xif0q/kids-ethnic-set/v/x/f/2-3-years-digibc001-digimart-original-imag69ha2hensycf-bb.jpeg?q=70'
                 alt='small child'
             />
             <p>Small Child Category</p>
             <p>Rs.100-8000</p>
         </div>
+        </NavLink>
+        
        </div>
     </>
   )
