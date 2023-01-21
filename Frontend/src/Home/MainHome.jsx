@@ -10,9 +10,7 @@ const MainHome = () => {
     }
   return (
     <>
-        <div className='nav'>
-
-        </div>
+        
       <div className="div1photoofnavbar">
       <NavLink to="/products">
       <img src='https://imagescdn.abof.com/img/app/shopmedia/production/1/13-62-10334.jpg?w=1898.75&auto=format'

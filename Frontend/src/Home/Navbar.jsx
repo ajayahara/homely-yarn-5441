@@ -1,51 +1,144 @@
 import React from 'react'
+
+import {Link, useNavigate} from "react-router-dom"
+
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  Button,
+
+} from '@chakra-ui/react'
 import "./Navbar.css"
- import { NavLink } from 'react-router-dom'
+
 const Navbar = () => {
-   
+const navigate=useNavigate();
   return (
-    <>
-        <div className='navbar'>
-        <div >
-                <NavLink to="/">
-                  <img src='https://tse3.mm.bing.net/th?id=OIP.8R7o26MsbKfBUM9pEaWhFwHaHa&pid=Api&P=0' 
-                    alt='navimg'
-                  />
-                </NavLink>
-            </div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-           <div></div>
-        <div>
-                <NavLink to="/">Home</NavLink>
-            </div>
-            <div>
-            <NavLink to="/products" className='signup'>Product</NavLink>
-            </div>
-            <div>
-                <NavLink to="/login">Log In</NavLink>
-            </div>
-            <div>
-            <NavLink to="/register" className='signup'>Register</NavLink>
-            </div>
+<div style={{display:"flex",flexDirection:"column",position:"sticky",top:"0",paddingBottom:"10px",borderBottom:"1px solid gray"}}>
+
+    <div className='Hnavbarcss'>
+
+
+    <div className='Hup'>
+         <div >
+    <ul className='H-left'>
+        {/* <Link>High Contrast</Link>
+        <Link>Contact Sales</Link> */}
+
+    </ul>
+
+    </div>
+
+
+
+    <div >
+    <ul className='H-right'>
+         <Link to='/products'>Product</Link>
+          <Link to="/">Home</Link>
+      
+       
+       
+         
+
+           <Menu>
+  <MenuButton as={Link} >
+  <Link>About</Link>
+  </MenuButton>
+  <MenuList>
+    <MenuItem>About Us </MenuItem>
+    <MenuItem>Contact Us</MenuItem>
+    <MenuItem>Carrers</MenuItem>
+    <MenuItem>Investor Relations</MenuItem>
+    <MenuItem>Management Teams</MenuItem>
+  </MenuList>
+</Menu>
+         
+     
+        
+         
+
+    </ul>
+
+    </div>
+
+    </div>
+
+
+    <div className='down'>
+
+     <div className='logo-link'>
+       <div className='logo-ewb'>
+          <img src="https://imagescdn.abof.com/img/app/brands/abof/abof_logo_1.png"  alt='logo' width="100px"/>
+        
+      </div>
+
+
+      <div >
+          <ul className='links-down'>
+
+
+          <Menu closeOnSelect={false}>
+  <MenuButton as={Link} colorScheme='blue'>
+  <Link>Men</Link>
+  </MenuButton>
+  <MenuList minWidth='240px'>
+    <MenuOptionGroup defaultValue='asc'>
+      <MenuItemOption value='asc'>Shirt</MenuItemOption>
+      <MenuItemOption value='desc'>Jeans</MenuItemOption>
+   
+      <MenuItemOption value='email'>T-shirt</MenuItemOption>
+      <MenuItemOption value='phone'>PullOver</MenuItemOption>
+      <MenuItemOption value='country'>Undergarment</MenuItemOption>
+    </MenuOptionGroup>
+  </MenuList>
+            </Menu>
+
+            <Link>Women</Link>
+            <Link>Children</Link>
+            <Link>Women</Link>
+
+            <Menu closeOnSelect={false}>
+  <MenuButton as={Link} colorScheme='blue'>
+  <Link>Resources</Link>
+  </MenuButton>
+  <MenuList minWidth='250px'>
+    <MenuOptionGroup defaultValue='asc'>
+      <MenuItem>About Us </MenuItem>
+    <MenuItem>Contact Us</MenuItem>
+    <MenuItem>Carrers</MenuItem>
+    </MenuOptionGroup>
+  </MenuList>
+            </Menu>
            
-            
-        </div>
-    </>
+         
+           
+          </ul>
+      </div>
+
+     </div>
+      <div className='button-down'>
+       <button id='first-btn' onClick={()=>navigate("/login")} >Login</button> 
+        <button onClick={()=>navigate("/register")} >Register </button>
+      </div>
+
+    </div>
+
+   
+       
+
+       
+   
+
+    
+    </div>
+   
+    
+    </div>
   )
 }
 
