@@ -9,6 +9,7 @@ const cartSchema=mongoose.Schema({
     category:{type:String,required:true},
     color:{type:String,required:true},
     gender:{type:String,required:true},
+    qty:{type:Number,required:true},
     userID:String
 },{
     versionKey:false
