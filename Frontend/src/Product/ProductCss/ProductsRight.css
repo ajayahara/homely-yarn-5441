@@ -58,7 +58,6 @@
 
 .a-products-right-bottom{
     height: 80vh;
-    /* overflow-y: scroll; */
     display: grid;
     grid-template-columns: repeat(4,225px);
     gap: 20px;
