@@ -1,8 +1,9 @@
 .a-products-right{
     padding:0px 20px 0px 20px;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     position: relative;
+    overflow-y: scroll;
 }
 .a-products-right-top{
     margin-bottom: 15px;
@@ -56,12 +57,12 @@
 
 
 .a-products-right-bottom{
-    height: 60vh;
-    overflow-y: scroll;
+    height: 80vh;
+    /* overflow-y: scroll; */
     display: grid;
     grid-template-columns: repeat(4,225px);
     gap: 20px;
 }
-.a-products-right-bottom::-webkit-scrollbar {
+.a-products-right::-webkit-scrollbar {
     display: none;
 }
