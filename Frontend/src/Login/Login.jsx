@@ -5,13 +5,13 @@ export const Login = () => {
     const iniUser={
         email:"abak00350@gmail.com",
         password:"Ajaya@111",
-        confirm_password:"Ajaya@111"
+        confirm_password:"Ajaya@111",
     }
     const [user,setUser]=useState(iniUser)
     return (
         <div className='login'>
             <div className='login-header'>
-                SIGN UP
+                SIGN IN
             </div>
             <form className='login-form'>
                 <div>
@@ -33,7 +33,7 @@ export const Login = () => {
             </form>
             <hr />
             <div className='sign-link'>
-                <span>Have no account?</span><span><a href="#abak">Sign up</a></span>
+                <span>Have no account?</span><span><a href="/register">Sign up</a></span>
             </div>
         </div>
     )
