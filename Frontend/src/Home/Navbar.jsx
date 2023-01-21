@@ -88,7 +88,7 @@ const navigate=useNavigate();
   </MenuButton>
   <MenuList minWidth='240px'>
     <MenuOptionGroup defaultValue='asc'>
-      <MenuItemOption value='asc'>Shirt</MenuItemOption>
+     <Link to="/products"><MenuItemOption value='asc'>Shirt</MenuItemOption></Link> 
       <MenuItemOption value='desc'>Jeans</MenuItemOption>
    
       <MenuItemOption value='email'>T-shirt</MenuItemOption>
