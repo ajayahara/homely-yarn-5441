@@ -21,11 +21,11 @@ loginRouter.post("/adddetails",async(req,res)=>{
                 console.log(err)
             }else{
                 await LoginModel.insertMany([{...data,pwd:new_pass}])
-                res.send("succesfully added")
+                res.send({"msg":"succesfully added"})
             }
         })
     }else{
-        res.send("Already Exist")
+        res.send({"msg":"Already Exist"})
     }
 } catch (error) {
     res.send({error})
@@ -40,15 +40,14 @@ loginRouter.patch("/loginUser",async (req,res)=>{
     if(ata.length!==0){
         bcrypt.compare(data.pwd,ata[0].pwd,(err,result)=>{
             if(result){
-                // console.log(ata)
                 const token=jwt.sign({userID:ata[0]._id},process.env.key)
                 res.send({data:ata,token})
             }else{
-                res.send("Wrong Credentials")
+                res.send({"msg":"Wrong Credentials"})
             }
         })
     }else{
-        res.send("No such user exist")
+        res.send({"msg":"No such user exist"})
     }
 } catch (error) {
     res.send({error})
