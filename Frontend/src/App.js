@@ -1,3 +1,4 @@
+import Admin from './Admin_Ajaya/Admin';
 import { AllRoute } from './Allroutes/AllRoute';
 import './App.css';
 import Footer from './Home/Footer';
@@ -8,6 +9,7 @@ function App() {
       <Navbar/>
       <AllRoute/>
       <Footer/>
+      {/* <Admin/> */}
     </div>
   );
 }

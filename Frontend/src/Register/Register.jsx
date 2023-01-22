@@ -51,7 +51,25 @@ export const Register = () => {
                 'Content-type': 'application/json'
             }
         }).then((res) => res.json()).then((data) => {
-            console.log(data);
+            if(data.msg==="Already Exist"){
+                toast({
+                    title: 'Registration',
+                    description: "Already Exist. Go To Login Page",
+                    status: 'warning',
+                    duration: 3000,
+                    isClosable: true,
+                    position: 'top',
+                })
+            }else{
+                toast({
+                    title: 'Registration',
+                    description: "Registration Successful. Go To Login Page",
+                    status: 'success',
+                    duration: 3000,
+                    isClosable: true,
+                    position: 'top',
+                })
+            }
         }).catch((err) => {
             console.log(err)
         })

@@ -1,0 +1,22 @@
+.product-admin{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,250px);
+    padding: 50px 0px 0px 40px;
+}
+.Admin-head{
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: #c9048f;
+    color: snow;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+}
+.Admin-head select{
+    color: black;
+}
+.Admin-head select:focus{
+    outline: none;
+}
