@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Item from "./Item";
 import Total from "./Total";
 import { Flex } from "@chakra-ui/react";
+import axios from "axios"
 const Initialdata = [
   {
     id: 1,
@@ -22,6 +23,20 @@ const Initialdata = [
 const MainPage = () => {
   const [data, setData] = useState(Initialdata);
 
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   let  getCartData=async()=>{
+  //     let res=await axios.get("https://cyan-splendid-kingfisher.cyclic.app/cart",{
+  //           headers:{
+  //             "Authorization":localStorage.getItem("token")
+  //         }
+  //     });
+  //     // console.log(res)
+  //     setData(res.data);
+  //   }
+  //   getCartData()
+  // },[])
   const totalsum = (sum) => {
     return sum.reduce((acc, c) => acc + c.qyt * c.price, 0);
   };
@@ -31,14 +46,29 @@ const MainPage = () => {
       item.id === id ? { ...item, qyt: item.qyt + amount } : item
     );
     setData(newdata);
+
+    // let data=await axios.get(`https://cyan-splendid-kingfisher.cyclic.app/cart/${id}`);
+    
+    // await axios.patch(`https://cyan-splendid-kingfisher.cyclic.app/cart/${id}`,{quantity:data.quantity+amount})
   };
+
+//   const handleDelete=async(userID)=>{
+//     axios.get(`https://cyan-splendid-kingfisher.cyclic.app/cart/delete/${userID}`,{
+//         method:"DELETE",
+//         headers:{
+//             Authorization:localStorage.getItem("token")
+//         }
+//     })
+//  }
+
   return (
-    <div style={{ border: "1px solid red", padding: 5 }}>
+    <div style={{  padding: 5 }}>
       {
         //  body
       }
       {data.map((item) => (
-        <Item
+        
+              <Item
           key={item.id}
           id={item.id}
           image={item.image}
@@ -47,14 +77,23 @@ const MainPage = () => {
           price={item.price}
           qyt={item.qyt}
           hendalqty={hendalqty}
+
+        //  handleDelete={handleDelete(item._id)}
+          
         />
+       
+        
+       
+        
       ))}
 
       {
         // total
       }
-      <Flex style={{display:"flex",justifyContent:"end"}}>Final Price :- <Total  total={totalsum(data)} /></Flex>
+      <Flex style={{display:"flex",justifyContent:"end",border:"5px solid pink"
+      ,width:"25%",marginLeft:"558px",marginTop:"8px",
+      fontWeight:"600",padding:"10px 10px"}}>Final Price :- <Total  total={totalsum(data)} /></Flex>
     </div>
   );
 };
-export default MainPage;
+export default MainPage ;

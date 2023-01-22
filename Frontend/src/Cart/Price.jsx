@@ -6,11 +6,13 @@ const Price = ({ label, price }) => {
 
       gap: "100px",
       // color:"red"
+      cursor:"pointer"
     }}
     >
-      <div style={{width:"200px",fontSize:"14px",height:"50px" ,color:"green"}}>{label}</div>
-      <div style={{color:"green" ,marginLeft:"10px",marginTop:"20px"}}>Price Rs.{price}</div>
+      <div style={{width:"200px",fontSize:"14px",height:"50px" ,color:"black"}}>{label}</div>
+      <div style={{color:"black" ,marginLeft:"10px",marginTop:"20px"}}>Price Rs.{price}</div>
     </div>
   );
 };
 export default Price;
+

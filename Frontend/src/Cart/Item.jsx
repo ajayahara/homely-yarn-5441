@@ -8,8 +8,9 @@ const Item = ({ label, price, qyt, hendalqty, id,image }) => {
         gap: 10,
         padding: 10,
         height:"110px",
-        marginTop: "2px",
+        marginTop: "15px",
         boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+        backgroundColor:"white"
       }}
     >
       <img src={image} alt="" width={140} height={120} />
