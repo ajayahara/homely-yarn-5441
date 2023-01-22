@@ -1,5 +1,6 @@
 import { useToast } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { Navigate } from 'react-router-dom'
 import "./Register.css"
 export const Register = () => {
     const iniUser = {
@@ -43,7 +44,7 @@ export const Register = () => {
             type: user.type,
             mobile: user.mobile
         }
-        fetch("", {
+        fetch("https://cyan-splendid-kingfisher.cyclic.app/login/adddetails", {
             method: "POST",
             body: JSON.stringify(payload),
             headers: {
@@ -57,7 +58,7 @@ export const Register = () => {
         setUser(iniUser)
     }
     return (
-        <div className='login'>
+        (localStorage.getItem("token"))? <Navigate to={"/"}/> :   <div className='login'>
             <div className='login-header'>
                 SIGN UP
             </div>

@@ -1,0 +1,286 @@
+/* .navbar
+{     background-color: white;
+
+    width: 100%;
+   
+    border: 1px solid white;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow: hidden;
+
+    display: flex;
+   justify-content: flex-end;
+   background-color: white;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.navbar img
+{     background-color: white;
+
+    width: 200px;
+    height: 100px;
+}
+.navbar div
+{     background-color: white;
+
+
+   margin-right: 42px;
+   margin-top: 20px;
+   font-size: 18px;
+  
+ 
+}
+a{     background-color: white;
+
+    text-decoration: none;
+    display: block;
+   
+}  */
+.Hnavbarcss {
+    display: flex;
+    flex-direction: column;
+    color: rgb(33, 51, 67);
+    /* position: sticky; */
+    /* top: -50px; */
+    background-color: white;
+    cursor: pointer;
+    z-index: 1;
+
+}
+
+.Hup {
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 0px 0px;
+    gap: 30px;
+}
+
+.H-left {
+    background-color: white;
+
+    display: flex;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.H-left li Link {
+    background-color: white;
+
+    text-decoration: none;
+}
+
+.H-right {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    margin-right: 50px;
+}
+
+.H-right ul {
+    background-color: white;
+
+    display: none;
+}
+
+.links-down-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.down {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    padding-left: 40px;
+    font-weight: 600;
+}
+
+.logo-link {
+    background-color: white;
+
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.button-down {
+    background-color: white;
+
+    display: flex;
+}
+
+.links-down {
+    background-color: white;
+
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    margin-left: 20px;
+    gap: 50px;
+    margin-top: 25px;
+
+}
+
+.logo-ewb {
+    background-color: white;
+
+    /* margin-top: 20px; */
+}
+
+.button-down {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+.button-down>button {
+    background-color: white;
+
+    background-color:
+        #a1328a;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+
+    height: 40px;
+    padding: 10px 30px;
+
+}
+
+#first-btn:hover {
+    background-color: white;
+
+    background: rgb(255, 206, 194);
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    .Hnavbarcss {
+        background-color: white;
+
+        width: 112%;
+        display: flex;
+        flex-direction: column;
+
+        color: rgb(33, 51, 67);
+        position: sticky;
+        top: -50px;
+
+        background-color: white;
+        z-index: 1000;
+        cursor: pointer;
+    }
+
+    .Hup {
+        background-color: white;
+
+        display: flex;
+        justify-content: space-evenly;
+
+        font-size: 20px;
+        margin-top: 15px;
+        padding: 0px 50px;
+        gap: 10px;
+
+    }
+
+    .H-left {
+        background-color: white;
+
+        display: flex;
+        gap: 40px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+
+    .H-right {
+        background-color: white;
+
+        display: flex;
+        gap: 20px;
+        margin-right: 10px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    .down {
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding-left: 60px;
+
+
+        font-weight: 600;
+
+
+
+    }
+
+    .links-down {
+        background-color: white;
+
+        display: flex;
+
+        font-size: 25px;
+
+        margin-left: 20px;
+        gap: 50px;
+        margin-top: 25px;
+
+    }
+
+
+    .button-down {
+        background-color: white;
+
+        display: flex;
+        gap: 20px;
+        background-color:
+            #a1328a;
+
+        margin-right: 11%;
+        margin-top: 28px;
+        margin-left: 120px;
+
+    }
+
+    .button-down>button {
+        background-color: white;
+
+        background-color: rgb(255, 92, 53);
+        color: white;
+        font-weight: 700;
+        border-radius: 5px;
+
+        height: 60px;
+        padding: 10px 30px;
+
+        font-size: 20px;
+
+    }
+
+
+
+
+}

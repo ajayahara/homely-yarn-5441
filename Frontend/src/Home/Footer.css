@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
-    background-color: black;
+    background-color: #c9048f;
     color: white;
 }
 .footer-a
@@ -73,8 +73,8 @@
 }
 .footer-d div{
     margin-top: 90px;
- width: 50px;
- height: 50px;
+ width: 30px;
+ height: 30px;
  border: 1px solid none;
  border-radius: 100%;
 background-color: white;

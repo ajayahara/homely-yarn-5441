@@ -2,7 +2,9 @@ import { useToast } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
 import "./Login.css"
+import {Navigate, useNavigate} from "react-router-dom"
 export const Login = () => {
+    const navigate=useNavigate()
     const iniUser={
         email:"abak00350@gmail.com",
         password:"Ajaya@111",
@@ -27,14 +29,16 @@ export const Login = () => {
             email:user.email,
             pwd:user.password
         }
-        fetch("",{
-            method:"POST",
+        fetch("https://cyan-splendid-kingfisher.cyclic.app/login/loginUser",{
+            method:"PATCH",
             body:JSON.stringify(payload),
             headers:{
                 'Content-type':'application/json'
             }
         }).then((res)=>res.json()).then((data)=>{
-            console.log(data);
+            localStorage.setItem("token",data.token);
+            localStorage.setItem("User",JSON.stringify(data.data[0].name));
+            navigate("/products")
         }).catch((err)=>{
             console.log(err)
         })
@@ -42,7 +46,7 @@ export const Login = () => {
     }
 
     return (
-        <div className='login'>
+       (localStorage.getItem("token"))? <Navigate to={"/"}/> : <div className='login'>
             <div className='login-header'>
                 SIGN IN
             </div>
