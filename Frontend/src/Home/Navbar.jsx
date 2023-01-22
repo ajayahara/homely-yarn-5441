@@ -15,36 +15,29 @@ import {
 
 } from '@chakra-ui/react'
 import "./Navbar.css"
+import { useState } from 'react'
+import { useEffect } from 'react'
 
 const Navbar = () => {
+  const [login,setLogin]=useState(false)
   const navigate = useNavigate();
+  useEffect(()=>{
+    localStorage.getItem("User")?setLogin(true):setLogin(false)
+  },[])
   return (
     <div style={{ display: "flex", flexDirection: "column", top: "0", paddingBottom: "10px", borderBottom: "1px solid gray" }}>
-
       <div className='Hnavbarcss'>
-
-
-        <div className='Hup'>
+      <div className='Hup'>
           <div >
             <ul className='H-left'>
               {/* <Link>High Contrast</Link>
         <Link>Contact Sales</Link> */}
-
             </ul>
-
           </div>
-
-
-
           <div >
             <ul className='H-right'>
               <Link to='/products'>Product</Link>
               <Link to="/">Home</Link>
-
-
-
-
-
               <Menu>
                 <MenuButton as={Link} >
                   <Link>About</Link>
@@ -102,8 +95,15 @@ const Navbar = () => {
             </div>
           </div>
           <div className='button-down'>
-            <button id='first-btn' onClick={() => navigate("/login")} >Login</button>
-            <button onClick={() => navigate("/register")} >Register </button>
+            <button id='first-btn' onClick={() => navigate("/login")} >
+              {login?localStorage.getItem("User"):"Login"}
+              </button>
+            <button onClick={localStorage.getItem("User")?()=>{
+              localStorage.clear();
+              setLogin(false)
+            }:() => navigate("/register")} >
+              {login?"Logout":"Register"}
+            </button>
           </div>
         </div>
       </div>
