@@ -1,0 +1,71 @@
+.a-productitem{
+    font-size: 13px;
+    width: 250px;
+    height: 340px;
+    border: 0.05px solid gainsboro;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.a-productitem:hover .a-productitem-div1{
+    bottom: 0px;
+}
+.a-productitem:hover .watch{
+    display: block;
+}
+.a-productitem-image>img{
+    width: 100%;
+}
+.a-productitem-div1{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+    background: #fff;
+    bottom: -45%;
+    transition: 0.8s;
+}
+.a-productitem-div1>div:nth-child(1)>p{
+    color: black;
+}
+.a-productitem-div1>div:nth-child(2){
+    display: flex;
+    gap: 8%;
+}
+.a-productitem-div1>div:nth-child(2)>span:nth-child(1){
+    color:  #db2ed3;
+}
+.a-productitem-div1>div:nth-child(2)>span:nth-child(2){
+    color: gray;
+    text-decoration: line-through;
+
+}
+.a-productitem-div1>div:nth-child(2)>span:nth-child(3){
+    color:  #7c2502;
+
+}
+.a-productitem-div1>div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.a-productitem-div1>div:nth-child(4){
+    display: flex;
+    justify-content: space-between;
+}
+.a-productitem-div1>div:nth-child(4)>button{
+    font-size: 14px;
+    padding: 5px 20px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid snow;
+    color: gray;
+    border-radius: 5px;
+}
+.a-productitem-div1>div:nth-child(4)>button:hover{
+    text-decoration: underline;
+   background-color:  #db2ed3;
+   color: white;
+}
