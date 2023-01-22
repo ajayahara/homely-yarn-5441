@@ -52,7 +52,7 @@ export const ProductItem = ({  _id,name,image_url,offerPrice,actualPrice,discoun
         </div>
         <div className='watch'>
             <img src="/Images/seen.png" alt="" onClick={()=>{
-                navigate(`/products/:${_id}`)
+                navigate(`/products/${_id}`)
             }}/>
         </div>
         {/* <div className='hot-deal'>

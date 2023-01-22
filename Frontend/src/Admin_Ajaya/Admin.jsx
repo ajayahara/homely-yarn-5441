@@ -24,7 +24,7 @@ export default function Admin() {
         setSort(e.target.value)
     }
     useEffect(()=>{
-        // getData("https://cyan-splendid-kingfisher.cyclic.app/products/get")
+        getData("https://cyan-splendid-kingfisher.cyclic.app/products/get")
     },[sort])
     // useEffect(()=>{
     //     handleFilter()
