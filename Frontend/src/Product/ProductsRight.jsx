@@ -67,10 +67,6 @@ const ProductsRight = () => {
   useEffect(()=>{
     getData("https://cyan-splendid-kingfisher.cyclic.app/products/get")
   },[color,price])
-
-
-console.log(products)
-
   return (
     <>
     <div className='a-products-right'>

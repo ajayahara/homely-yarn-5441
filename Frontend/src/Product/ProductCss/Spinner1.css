@@ -4,7 +4,6 @@
     /* background-color: gainsboro; */
     display: grid;
     position:absolute;
-    z-index: 200;
     place-items: center;
     opacity: 0.4;
 }

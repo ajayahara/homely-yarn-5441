@@ -19,7 +19,7 @@ import "./Navbar.css"
 const Navbar = () => {
   const navigate = useNavigate();
   return (
-    <div style={{ display: "flex", flexDirection: "column", position: "sticky", top: "0", paddingBottom: "10px", borderBottom: "1px solid gray" }}>
+    <div style={{ display: "flex", flexDirection: "column", top: "0", paddingBottom: "10px", borderBottom: "1px solid gray" }}>
 
       <div className='Hnavbarcss'>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
             <div className='logo-ewb'>
               <img src="https://imagescdn.abof.com/img/app/brands/abof/abof_logo_1.png" alt='logo' width="100px" />
             </div>
-            <div >
+            <div className='link-down-div'>
               <ul className='links-down'>
                 <Menu closeOnSelect={false}>
                   <MenuButton as={Link} colorScheme='blue'>

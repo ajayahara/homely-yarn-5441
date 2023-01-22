@@ -1,5 +1,6 @@
 /* .navbar
-{
+{     background-color: white;
+
     width: 100%;
    
     border: 1px solid white;
@@ -14,12 +15,14 @@
    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 .navbar img
-{
+{     background-color: white;
+
     width: 200px;
     height: 100px;
 }
 .navbar div
-{
+{     background-color: white;
+
 
    margin-right: 42px;
    margin-top: 20px;
@@ -27,7 +30,8 @@
   
  
 }
-a{
+a{     background-color: white;
+
     text-decoration: none;
     display: block;
    
@@ -36,143 +40,179 @@ a{
     display: flex;
     flex-direction: column;
     color: rgb(33, 51, 67);
-    position: sticky;
+    /* position: sticky; */
     /* top: -50px; */
     background-color: white;
-    z-index: 1000;
     cursor: pointer;
+    z-index: 1;
+
 }
-.Hup{
+
+.Hup {
+    background-color: white;
+
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     font-size: 14px;
     margin-top: 15px;
-    padding: 0px 80px;
-    gap: 30px; 
+    padding: 0px 0px;
+    gap: 30px;
 }
-.H-left{
+
+.H-left {
+    background-color: white;
+
     display: flex;
     gap: 20px;
     margin-left: 20px;
 }
+
 .H-left li Link {
+    background-color: white;
+
     text-decoration: none;
 }
 
-.H-right{
+.H-right {
+    background-color: white;
     display: flex;
     gap: 20px;
     margin-right: 50px;
 }
-.H-right ul{
+
+.H-right ul {
+    background-color: white;
+
     display: none;
 }
 
+.links-down-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
 
-
-.down{
+.down {
+    background-color: white;
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    align-items: center;
+    margin-top: 0px;
     padding-left: 40px;
-
-   
     font-weight: 600;
-   
-   
-  
 }
 
-.logo-link{
-    display: flex;
-    gap: 50px;
-   
-    
-}
-.button-down{
-    display: flex;
-}
-.links-down{
-    display: flex;
-    font-size: 20px;
-  
-    margin-left: 20px;
-    gap: 50px;
-    margin-top: 25px;
-   
-}
+.logo-link {
+    background-color: white;
 
-.logo-ewb{
-    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
 
 .button-down {
+    background-color: white;
+
+    display: flex;
+}
+
+.links-down {
+    background-color: white;
+
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    margin-left: 20px;
+    gap: 50px;
+    margin-top: 25px;
+
+}
+
+.logo-ewb {
+    background-color: white;
+
+    /* margin-top: 20px; */
+}
+
+.button-down {
+    background-color: white;
     display: flex;
     gap: 20px;
-   
 
-    margin-right: 11%;
-    margin-top: 28px;
-   
+    margin-right: 50px;
+    margin-top: 10px;
 }
 
-.button-down>button{
-  background-color: 
-  #a1328a;
-  color: white;
-  font-weight: 600;
-  border-radius: 5px;
- 
-  height: 40px;
-  padding: 10px 30px;
+.button-down>button {
+    background-color: white;
 
-}
+    background-color:
+        #a1328a;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
 
-#first-btn:hover{
-    background:rgb(255, 206, 194) ;
+    height: 40px;
+    padding: 10px 30px;
 
 }
 
+#first-btn:hover {
+    background-color: white;
 
-@media screen and (max-width:768px){
+    background: rgb(255, 206, 194);
+
+}
+
+
+@media screen and (max-width:768px) {
+
     .Hnavbarcss {
-       width: 112%;
+        background-color: white;
+
+        width: 112%;
         display: flex;
         flex-direction: column;
-      
+
         color: rgb(33, 51, 67);
         position: sticky;
         top: -50px;
-      
+
         background-color: white;
         z-index: 1000;
         cursor: pointer;
     }
 
-    .Hup{
+    .Hup {
+        background-color: white;
+
         display: flex;
-        justify-content:space-evenly;
-       
+        justify-content: space-evenly;
+
         font-size: 20px;
         margin-top: 15px;
         padding: 0px 50px;
         gap: 10px;
-       
+
     }
 
-    .H-left{
+    .H-left {
+        background-color: white;
+
         display: flex;
         gap: 40px;
         margin-left: 20px;
         font-size: 20px;
         font-weight: 600;
-       
+
     }
 
-    .H-right{
+    .H-right {
+        background-color: white;
+
         display: flex;
         gap: 20px;
         margin-right: 10px;
@@ -180,59 +220,67 @@ a{
         font-weight: 600;
     }
 
-    
-.down{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 40px;
-    padding-left: 60px;
 
-   
-    font-weight: 600;
-   
-   
-  
-}
+    .down {
+        background-color: white;
 
-.links-down{
-    display: flex;
-  
-    font-size: 25px;
-  
-    margin-left: 20px;
-    gap: 50px;
-    margin-top: 25px;
-   
-}
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 40px;
+        padding-left: 60px;
 
 
-.button-down {
-    display: flex;
-    gap: 20px;
-   background-color: 
-   #a1328a;
- 
-    margin-right: 11%;
-    margin-top: 28px;
-    margin-left: 120px;
-   
-}
-
-.button-down>button{
-    background-color: rgb(255, 92, 53);
-    color: white;
-    font-weight: 700;
-    border-radius: 5px;
-   
-    height: 60px;
-    padding: 10px 30px;
-   
-    font-size: 20px;
-  
-  }
+        font-weight: 600;
 
 
-    
- 
+
+    }
+
+    .links-down {
+        background-color: white;
+
+        display: flex;
+
+        font-size: 25px;
+
+        margin-left: 20px;
+        gap: 50px;
+        margin-top: 25px;
+
+    }
+
+
+    .button-down {
+        background-color: white;
+
+        display: flex;
+        gap: 20px;
+        background-color:
+            #a1328a;
+
+        margin-right: 11%;
+        margin-top: 28px;
+        margin-left: 120px;
+
+    }
+
+    .button-down>button {
+        background-color: white;
+
+        background-color: rgb(255, 92, 53);
+        color: white;
+        font-weight: 700;
+        border-radius: 5px;
+
+        height: 60px;
+        padding: 10px 30px;
+
+        font-size: 20px;
+
+    }
+
+
+
+
 }
