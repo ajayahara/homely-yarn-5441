@@ -5,12 +5,12 @@
 
 <h2 style="color:Tomato;">About</h2>
 
-<h3>It a sister concern of Aditya Birla Group of India which serves as an online retail store. It is an e-commerce website for clothes.</h3>
+<h3>It is a sister concern of the Aditya Birla Group of India that operates as an online retail store. The company's e-commerce website offers a wide range of clothing options.</h3>
 
 
 **Original website link** : https://www.abof.com/
  <br/>
- Link of My deployed project :
+ Here is the link to my deployed project:
  <br/>
  
  
@@ -29,7 +29,6 @@
 <h2>Team Of 5 Members.</h2>
 <br />
 <h3 style="color:Tomato;">
-    build this website clone during construct week in just 5 days. 
-    Most focused on Functionality part.
+    We built this website clone during a construction week in just 5 days, with a primary focus on its functional aspects.
 </h3>
 <br/> <br/>
