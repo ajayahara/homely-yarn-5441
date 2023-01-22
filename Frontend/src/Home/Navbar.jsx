@@ -3,6 +3,7 @@ import React from 'react'
 import {Link, useNavigate} from "react-router-dom"
 
 import {
+  Icon,
   Menu,
   MenuButton,
   MenuList,
@@ -60,7 +61,7 @@ const navigate=useNavigate();
   </MenuList>
 </Menu>
          
-         <Link to="/cart">{AiOutlineShoppingCart}</Link>
+         <Link to="/cart"><Icon as={AiOutlineShoppingCart}></Icon></Link>
         
          
 
