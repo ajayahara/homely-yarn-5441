@@ -15,6 +15,7 @@ import {
   Button,
 
 } from '@chakra-ui/react'
+
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import "./Navbar.css"
 
