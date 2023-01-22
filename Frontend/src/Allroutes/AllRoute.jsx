@@ -6,6 +6,7 @@ import { Payment } from '../Payment/Payment'
 import Products from '../Product/Products'
 import { Register } from '../Register/Register'
 import { SingleProduct } from '../SingleProduct/SingleProduct'
+import Cart from "../Cart/Cart"
 export const AllRoute = () => {
   return (
     <Routes>
@@ -14,7 +15,7 @@ export const AllRoute = () => {
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/products' element={<Products/>}></Route>
         <Route path='/products/:id' element={<SingleProduct/>}></Route>
-        <Route path='/cart' element={<div>Cart</div>}></Route>
+        <Route path='/cart' element={<Cart/>}></Route>
         <Route path='/payment' element={<Payment/>}></Route>
         <Route path='*' element={<div>No Page Found</div>}></Route>
     </Routes>
