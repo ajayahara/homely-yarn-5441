@@ -14,6 +14,7 @@ import {
   Button,
 
 } from '@chakra-ui/react'
+import {AiOutlineShoppingCart} from "react-icons/ai"
 import "./Navbar.css"
 
 const Navbar = () => {
@@ -48,6 +49,7 @@ const navigate=useNavigate();
            <Menu>
   <MenuButton as={Link} >
   <Link>About</Link>
+  
   </MenuButton>
   <MenuList>
     <MenuItem>About Us </MenuItem>
@@ -58,7 +60,7 @@ const navigate=useNavigate();
   </MenuList>
 </Menu>
          
-     
+         <Link to="/cart">{AiOutlineShoppingCart}</Link>
         
          
 
@@ -100,7 +102,7 @@ const navigate=useNavigate();
 
             <Link>Women</Link>
             <Link>Children</Link>
-            <Link>Women</Link>
+            <Link>Girl</Link>
 
             <Menu closeOnSelect={false}>
   <MenuButton as={Link} colorScheme='blue'>
