@@ -38,7 +38,7 @@ export const Login = () => {
         }).then((res)=>res.json()).then((data)=>{
             localStorage.setItem("token",data.token);
             localStorage.setItem("User",JSON.stringify(data.data[0].name));
-            navigate("/products")
+            window.location.reload()
         }).catch((err)=>{
             console.log(err)
         })
