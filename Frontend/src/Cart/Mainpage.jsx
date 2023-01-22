@@ -2,7 +2,9 @@ import { useState,useEffect } from "react";
 import Item from "./Item";
 import Total from "./Total";
 import { Flex } from "@chakra-ui/react";
+
 import axios from "axios"
+
 const Initialdata = [
   {
     id: 1,
