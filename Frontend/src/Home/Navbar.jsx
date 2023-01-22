@@ -17,6 +17,7 @@ import {
 import "./Navbar.css"
 import { useState } from 'react'
 import { useEffect } from 'react'
+import {AiOutlineShoppingCart} from "react-icons/ai"
 
 const Navbar = () => {
   const [login,setLogin]=useState(false)
@@ -50,6 +51,7 @@ const Navbar = () => {
                   <MenuItem>Management Teams</MenuItem>
                 </MenuList>
               </Menu>
+              <Link to="/cart"><h1 ><AiOutlineShoppingCart/></h1></Link>
             </ul>
           </div>
         </div>

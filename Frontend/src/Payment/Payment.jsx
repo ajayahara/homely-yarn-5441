@@ -1,9 +1,13 @@
 import { useToast } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react'
-import "./Payment.css"
+import "./Payment.css";
+import { useNavigate } from 'react-router-dom';
 
 export const Payment = () => {
+    const navigate=useNavigate()
+
+    let price=localStorage.getItem("total")
     const initialAddress={
         First_name:"Ajaya Kumar",
         Last_name:"Behera",
@@ -30,6 +34,7 @@ export const Payment = () => {
                 isClosable: true,
                 position:'top',
             })
+            navigate("/")
         }else{
             toast({
                 title: 'Payment',
@@ -125,7 +130,7 @@ export const Payment = () => {
                     </div>
                     <div className='a-payment-div2-bottom'>
                         <div className='a-div2-left'>
-                            <span>AMOUNT PAYABLE: Rs 8391</span>
+                            <span>AMOUNT PAYABLE: Rs {price}</span>
                             <div>
                                 <div>
                                     <label> Credit/Debit Card/Net Banking/Wallet</label>
@@ -168,13 +173,13 @@ export const Payment = () => {
                         </div>
                         <div>
                             <span>Item Total</span>
-                            <span>Rs 8391</span>
+                            <span>Rs {price}</span>
                         </div>
                     </div>
                     <div className="a-div-total">
                         <div>
                             <span>Total</span>
-                            <span>Rs 8391</span>
+                            <span>Rs {price}</span>
                         </div>
                     </div>
                 </div>

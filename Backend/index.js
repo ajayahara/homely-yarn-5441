@@ -14,7 +14,7 @@ app.use(cors())
 app.use(express.json())
 app.use("/login",loginRouter)
 app.use("/products",productRouter)
-// app.use(authenticate)
+app.use(authenticate)
 app.use("/cart",cartRouter)
 
 app.listen(8080,async ()=>{
