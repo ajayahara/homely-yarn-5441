@@ -61,7 +61,7 @@ const navigate=useNavigate();
   </MenuList>
 </Menu>
          
-         <Link to="/cart"><Icon as={AiOutlineShoppingCart}></Icon></Link>
+         <Link to="/cart"><h1><AiOutlineShoppingCart/></h1></Link>
         
          
 
